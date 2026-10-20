@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Voxel Realms Survival</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="gameRoot">
+    <canvas id="gameCanvas"></canvas>
+
+    <section id="startScreen" class="screen">
+      <h1>Voxel Realms</h1>
+      <p>Explore deserts, forests, rivers, snowlands, caves, oceans, villages, the Nether and the End.</p>
+      <button id="startButton">Start New World</button>
+      <p class="small">Computer: WASD, mouse, Space, E, left click, right click</p>
+      <p class="small">Mobile: use the joystick, swipe area and action buttons</p>
+    </section>
+
+    <section id="hud">
+      <div id="status">
+        <div>❤️ <span id="healthText">100</span></div>
+        <div>🍖 <span id="hungerText">100</span></div>
+        <div>🌎 <span id="dimensionText">Overworld</span></div>
+        <div>🏞️ <span id="biomeText">Plains</span></div>
+        <div>📍 <span id="coordinatesText">0, 0, 0</span></div>
+      </div>
+
+      <div id="prompt"></div>
+      <div id="crosshair">+</div>
+
+      <div id="hotbar"></div>
+    </section>
+
+    <section id="inventoryPanel" class="panel hidden">
+      <h2>Inventory and Crafting</h2>
+      <div id="inventoryItems"></div>
+
+      <h3>Crafting</h3>
+      <div id="craftingButtons">
+        <button data-recipe="stone_pickaxe">Stone Pickaxe</button>
+        <button data-recipe="iron_pickaxe">Iron Pickaxe</button>
+        <button data-recipe="gold_pickaxe">Gold Pickaxe</button>
+        <button data-recipe="diamond_pickaxe">Diamond Pickaxe</button>
+        <button data-recipe="obsidian_pickaxe">Obsidian Pickaxe</button>
+        <button data-recipe="iron_axe">Iron Axe</button>
+        <button data-recipe="diamond_sword">Diamond Sword</button>
+        <button data-recipe="bow">Bow</button>
+        <button data-recipe="arrows">Arrows</button>
+        <button data-recipe="healing_potion">Healing Potion</button>
+        <button data-recipe="speed_potion">Speed Potion</button>
+        <button data-recipe="strength_potion">Strength Potion</button>
+        <button data-recipe="fire_resistance">Fire Resistance</button>
+        <button data-recipe="water_breathing">Water Breathing</button>
+      </div>
+
+      <button id="closeInventory">Close</button>
+    </section>
+
+    <section id="messageBox"></section>
+
+    <section id="mobileControls">
+      <div id="joystick">
+        <div id="joystickKnob"></div>
+      </div>
+
+      <div id="lookZone"></div>
+
+      <div id="mobileButtons">
+        <button id="jumpButton">Jump</button>
+        <button id="mineButton">Mine</button>
+        <button id="attackButton">Attack</button>
+        <button id="useButton">Use</button>
+        <button id="inventoryButton">Bag</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
+
